@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut" href="assets/img/favicon.ico" type="image/x-icon">
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <!-- Go to cdn and select version 4.2.0-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <title>Book Apointment</title>
+</head>
+<body>
+    <!--- css form -->
+    
+    <form action='' class='form' id="whatsapp-form">
+  <p class='field required'>
+    <label class='label required' for='name'>Full name</label>
+    <input class='text-input' id='name' name='name' required type='text' value=''>
+  </p>
+  <p class='field required half'>
+    <label class='label' for='email'>E-mail</label>
+    <input class='text-input' id='email' name='email' type='email'>
+  </p>
+  <p class='field half'>
+    <label class='label' for='phone'>Phone</label>
+    <input class='text-input' id='phone' name='phone' required type='phone'>
+  </p>
+  <div class='field'>
+    <label class='label'>Prefered method of contact</label>
+    
+    <p class="field">
+      <label for="selecting"></label>
+      <select name="selection" id="selecting" class="select" required>
+        <option selected value="Whatsapp">Whatsapp</option>
+        <option selected value="E-mail">E-mail</option>
+        <option selected value="Phone Call">Phone Call</option>
+        <option selected value="SMS">SMS</option>
+      </select>
+    </p>
+  
+  </div>
+    <p class='field half'>
+    <label class='label' for='select'>Time</label>
+    <select class='select' id='select' required>
+      <option selected value=''>Select time</option>
+      <option value='09:00 AM'>09:00 AM</option>
+      <option value='09:30 AM'>09:30 AM</option>
+      <option value='10:00 AM'>10:00 AM</option>
+      <option value='10:30 AM'>10:30 AM</option>
+      <option value='11:00 AM'>11:00 AM</option>
+      <option value='11:30 AM'>11:30 AM</option>
+      <option value='12:00 PM'>12:00 PM</option>
+      <option value='12:30 PM'>12:30 PM</option>
+      <option value='13:00 PM'>13:00 PM</option>
+      <option value='13:30 PM'>13:30 PM</option>
+      <option value='14:00 PM'>14:00 PM</option>
+      <option value='14:30 PM'>14:30 PM</option>
+      <option value='15:00 PM'>15:00 PM</option>
+      <option value='15:30 PM'>15:30 PM</option>
+      <option value='16:00 PM'>16:00 PM</option>
+      <option value='16:30 PM'>16:30 PM</option>
+      <option value='17:00 PM'>17:00 PM</option>
+      <option value='17:00 PM'>17:30 PM</option>
+    </select>
+  </p>
+    <p class='field half' id="todayDate">
+    <label class='label' for='date'></label>
+    <input type="text" placeholder="pick a date" onfocus="(this.type='date')" class='text-input' id='date'>
+  </p>
+  <div class='field'>
+    <label class='label'>Treatment</label>
+    <ul class='options'>
+      <li class='option' id="treatment">
+        <input class='option-input' id='option-0' checked name='option' type='checkbox' value='Body Waxing'>
+        <label class='option-label' for='option-0'>Body Waxing</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-1' name='option' type='checkbox' value='Thai Massage'>
+        <label class='option-label' for='option-1'>Thai Massage</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-2' name='option' type='checkbox' value='Manicure'>
+        <label class='option-label' for='option-2'>Manicure</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-3' name='option' type='checkbox' value='Scrub'>
+        <label class='option-label' for='option-3'>Scrub</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-4' name='option' type='checkbox' value='Hot Stone Massage'>
+        <label class='option-label' for='option-4'>Hot Stone Massage</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-5' name='option' type='checkbox' value='Deep cleansing facial treatment'>
+        <label class='option-label' for='option-5'>Deep cleansing facial treatment</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-6' name='option' type='checkbox' value='Anti-aging facial treatment'>
+        <label class='option-label' for='option-6'>Anti-aging facial treatment</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='option-7' name='option' type='checkbox' value='Mud wrap massage'>
+        <label class='option-label' for='option-7'>Mud wrap massage</label>
+      </li>
+    </ul>
+  </div>
+  <p class='field'>
+    <label class='label' for='about'>Any personal request?</label>
+    <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>
+  </p>
+  <p class='field half'>
+    <input class='button' type='submit' value='Send'>
+  </p>
+</form>
+
+
+    <!--~~~~~~~~~~ mainjs ~~~~~~~~~~-->
+    <script>
+        /* ------------------ Whatsapp Reciever ---------- */
+
+document.getElementById("whatsapp-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("about").value;
+            var theDay = document.getElementById("date").value;
+           
+            var selectedTime = document.getElementById("select").value;      
+            var preferedMethod = document.getElementById('selecting').value;
+           
+            //var checkedValue = null;
+            var treatment = document.querySelectorAll('input[name="option"]:checked');
+            var arr = [];
+            for(var i = 0; i <= treatment.length; i++){
+              if(treatment[i].checked){
+                arr.push(treatment[i].value);
+                break;
+              }
+            }
+            let results = arr.join(', ');
+
+            //checkedValue = document.getElementsByClassName("option-label").innerHTML;
+
+
+            let contact = '+27603177956';
+
+            var encodedMessage = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Preferred Mode Contact: " + preferedMethod + "\n" +
+                "Time of Appointment: " + selectedTime + "\n" +
+                "Day of Appointment: " + theDay + "\n" +
+                "Treatment: " + results  + "\n" +
+                "Message: " + `${message.trim().length >=1 ? message : 'No request!'}`
+            );
+
+            var link;
+
+            // Check if user is on a mobile device
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                link = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
+            } else { // Desktop device
+                link = `https://web.whatsapp.com/send?phone=${contact}&text=${encodedMessage}`;
+            }
+
+            window.open(link, '_blank');
+});
+
+    </script>
+</body>
+</html>
