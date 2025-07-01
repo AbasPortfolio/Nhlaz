@@ -35,6 +35,7 @@ module.exports = {
     },
     fontFamily: {
       Jost: ["Jost", "sans-serif"],
+      Edu: ["Edu QLD Hand", "cursive"],
       Lobster: [ "Lobster","sans-seri"]
     },
     container: {
