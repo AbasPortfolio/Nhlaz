@@ -15,14 +15,18 @@
     <!--- css form -->
     
     <form action='' class='form' id="whatsapp-form">
+       <div class="header">
+      <img src="assets/img/Logo 1.png" alt="">
+      <h1>Nlaz Health & Beauty Booking</h1>
+    </div>
   <p class='field required'>
     <label class='label required' for='name'>Full name</label>
     <input class='text-input' id='name' name='name' required type='text' value=''>
   </p>
-  <p class='field required half'>
+  <!--<p class='field required half'>
     <label class='label' for='email'>E-mail</label>
     <input class='text-input' id='email' name='email' type='email'>
-  </p>
+  </p> -->
   <p class='field half'>
     <label class='label' for='phone'>Phone</label>
     <input class='text-input' id='phone' name='phone' required type='phone'>
@@ -71,6 +75,7 @@
   </p>
   <div class='field'>
     <label class='label'>Treatment</label>
+    <p class="only-one">Select One</p>
     <ul class='options'>
       <li class='option' id="treatment">
         <input class='option-input' id='option-0' checked name='option' type='checkbox' value='Body Waxing'>
@@ -123,8 +128,7 @@
 document.getElementById("whatsapp-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
+            var name = document.getElementById("name").value;        
             var phone = document.getElementById("phone").value;
             var message = document.getElementById("about").value;
             var theDay = document.getElementById("date").value;
@@ -149,10 +153,10 @@ document.getElementById("whatsapp-form").addEventListener("submit", function (ev
             let contact = '+27603177956';
 
             var encodedMessage = encodeURIComponent(
+                "Nlaz Booking" + "\n" + "\n" +
                 "Name: " + name + "\n" +
-                "Email: " + email + "\n" +
                 "Phone: " + phone + "\n" +
-                "Preferred Mode Contact: " + preferedMethod + "\n" +
+                "Prefered Contact: " + preferedMethod + "\n" +
                 "Time of Appointment: " + selectedTime + "\n" +
                 "Day of Appointment: " + theDay + "\n" +
                 "Treatment: " + results  + "\n" +
