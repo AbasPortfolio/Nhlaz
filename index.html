@@ -18,12 +18,13 @@
 <body>
 
     <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
-    <header id="navbar" class="bg-[#5f7745] fixed w-full top-0 left-0 z-50">
-        <div class=" bg-[#040503] w-full  p-1 text-center top-0 left-0"><span class="w-100 text-center"> We are here <i class="ri-map-pin-line"></i> 50A Beyers Naude street, Standerton 2430. Opening time; 08:00 AM - 17:00 PM Tueday till Saturday</span></div>
+    <header id="navbar" class="bg-[#fbf3f2] fixed w-full top-0 left-0 z-50">
+        <div class=" bg-[#0e191d] w-full  p-1 text-center text-[#d0c7c2] top-0 left-0"><span class="w-100 text-center"> We are here <i class="ri-map-pin-line"></i> 50A Beyers Naude street, Standerton 2430. Opening time; 08:00 AM - 17:00 PM Tueday till Saturday</span></div>
+        <hr>
         <nav class="container flex items-center justify-between h-16 sm:h-20">
             <div class="flex justify-center items-center gap-2">
                 <img src="assets/img/Logo 1.png" width="52" class="md: w-55">
-                <p class="text-center text-[#1c382c] py-1 font-Lobster text-xl">Nhlaz<br> Health & Beauty <br><span class="text-[#506148]">Spa</span></p>
+                <p class="text-center text-[#829461] py-1 font-Edu leading-tight text-xl"><span class="text-[#506148]">Nhlaz</span><br> Health & Beauty </p>
             </div>
     
             <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm
@@ -31,16 +32,16 @@
             lg:w-auto">
                 <ul class="flex flex-col items-center gap-8 lg:flex-row">
                     <li>
-                        <a href="#home" class="nav-link text-[#07301a] sm:text-slate-300">Home</a>
+                        <a href="#home" class="nav-link text-[#829461] font-Edu sm:text-slate-300">Home</a>
                     </li>
                     <li>
-                        <a href="#about" class="nav-link text-[#07301a] sm:text-slate-300">About</a>
+                        <a href="#about" class="nav-link text-[#829461] font-Edu sm:text-slate-300">About</a>
                     </li>
                     <li>
-                        <a href="#popular" class="nav-link text-[#07301a] sm:text-slate-300">Popular</a>
+                        <a href="#popular" class="nav-link text-[#829461] font-Edu sm:text-slate-300">Popular</a>
                     </li>
                     <li>
-                        <a href="#review" class="nav-link text-[#07301a] sm:text-slate-300">Review</a>
+                        <a href="#review" class="nav-link text-[#829461] font-Edu sm:text-slate-300">Review</a>
                     </li>
                 </ul>
 
@@ -52,7 +53,7 @@
                     <img src="assets/img/leaf-2.png" alt="leaf_image" class="w-32">
                 </div>
             </div>
-            <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+            <div class="text-xl text-[#1e704b] sm:text-3xl cursor-pointer z-50 lg:hidden">
                 <i class="ri-menu-4-line" id="hamburger"></i>
             </div>
         </nav>
@@ -258,7 +259,7 @@
                             moments</h3>
                             <p class="text-slate-300">
                                 We've come together on the sole purpose of serving Standerton. How we do that is easy, we bring peace 
-                                to the daily huslte men and women face each day. By providing an escape that brings along tranquility and 
+                                to the daily huslte that men and women face each day. By providing an escape that brings along tranquility and 
                                 calm. Our team are highly skilled professionals who dedicate themselves wholly to delivering the best experience
                                 to our clients.
                             </p>
@@ -280,8 +281,8 @@
                             your day</h3>
                             <p class="text-slate-300">
                                 Thalgo is our main go to product when it comes to serving our clients. Their natural cosmetic products align well
-                                with our moto, "Earth all the way." We proud ourselves on using earthly natural ingredients to ensure our clients
-                                are always given the best of service. 
+                                with our moto, "Earth all day." We proud ourselves on using earthly natural ingredients to ensure our clients
+                                are always given the best nature has to offer. 
                             </p>
                         </div>
                       </div>
@@ -400,7 +401,7 @@
 
             <div class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20">
                 <h2 class="title">Client's are talking</h2>
-                <p class="max-w-2xl text-slate-300">Words of encouragement and feedback are what keeps us always improving and striving up, giving our best service you know and love us for.</p>
+                <p class="max-w-2xl text-slate-300">Words of encouragement and feedback are what keeps us always improving and striving up, giving our best service that you know and love us for.</p>
             </div>
 
             <div class="container">
@@ -491,16 +492,16 @@
         <!-- newsletter -->
         <div class="container text-white absolute top-0 right-0 left-0 -translate-y-1/2">
             <div class="bg-green-900 px-10 pt-5 pb-10 space-y-5 rounded-md">
-                <h3><span class="text-yellow-500">Subscribe</span> to our newsletter
-                    Subscribe</h3>
+                <h3><span class="text-yellow-500">Subscribe</span> to our newsletter</h3>
 
-                <div class="flex flex-col md:flex-row gap-1">
-                    <input type="email" id="email" placeholder="Your Email Address" class="w-full px-5 py-3 text-green-900 rounded-md outline-none">
-                    <button onclick="sendEmail()" class="flex items-center justify-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300">
+                <form class="flex flex-col md:flex-row gap-1" id="contact-form">
+                    <p id="contact-message"></p>
+                    <input type="email" name="user_email" placeholder="Write Your Email To Nhlaz" class="w-full px-5 py-3 text-green-900 rounded-md outline-none">
+                    <button  class="flex items-center justify-center gap-1 bg-green-950 px-5 py-3 rounded-md hover:opacity-80 duration-300">
                         <span>Subscribe</span>
                         <i class="ri-send-plane-2-fill"></i>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
         <!-- social icon -->
@@ -531,11 +532,11 @@
              <div>
                 <p class="mb-5 font-bold text-xl">Quick Link</p>
                 <div class="flex flex-col gap-1">
-                    <a href="#">Plants</a>
-                    <a href="#">Flowers</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Seeds</a>
-                    <a href="#">Shipping</a>
+                    <a href="#home">Home</a>
+                    <a href="#popular">Popular</a>
+                    <a href="#about">Our Story</a>
+                    <a href="#review">Reviews</a>
+                    <a href="contact.html">Make An Appointment</a>
                 </div>
              </div>
             <!-- item 3 -->
@@ -556,7 +557,7 @@
                     <a href="tel:017 422 0317">017 422 0317</a>
                     <a href="emailto:nhlaz@nhlazhealth.co.za">nhlaz@nhlazhealth.co.za</a>
                     <br>
-                    <p>1234 Naudee street, Sisulu drive, Burger st. 56789, Standerton</p>
+                    <p>50A Beyers Naude street, Standerton 2430.</p>
                 </div>
              </div>
         </div>
@@ -582,6 +583,8 @@
 
        <!--~~~~~~~~~~ mainjs ~~~~~~~~~~-->
     <script src="./main.js"></script>
+    <!-- =================== Email Js ==========-->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 
 </html>
