@@ -11,7 +11,7 @@ const hamburger = document.getElementById("hamburger");
 navLink.forEach(link => {
     link.addEventListener("click",()=>{
         navMenu.classList.toggle("left-[0]")
-    hamburger.classList.toggle("ri-close-large-line")
+    hamburger.classList.toggle("ri-close-large-line text-[#d0c7c4]")
     })
 });
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
@@ -68,54 +68,31 @@ const swiper = new Swiper('.swiper',{
 });
 
 /*~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK ~~~~~~~~~~~~~~~*/
-const activeLink = () => {
-    const sections = document.querySelectorAll("section");
-    const navLink = document.querySelectorAll(".nav-link");
 
-    let current = "home"
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-
-        if(this.scrollY >= sectionTop - 60){
-            current = section.getAttribute("id")
-        }
-    })
-    navLink.forEach(item => {
-        item.classList.remove("active")
-        if(item.href.includes(current)){
-            item.classList.add("active")
-        }
-    })
-}
-
-window.addEventListener("scroll",activeLink)
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
 
 
-/* ------------------ Email Js ---------- */
-const sendEmail = () =>{
-    
+/* ===================== EMAIL JS ======================== */
+const contactForm = document.getElementById('contact-form')
+const contactMessage = document.getElementById('contact-message')
+const sendMail = (e)=>{
+      e.preventDefault()
 
-
-    // Initialize EmailJS with your Public Key
-    emailjs.init("aH2XWXsT_f5r4vq-1"); // Replace with your actual Public Key from EmailJS dashboard
-
-    // Define template parameters
-    var templateParams = {
-        to_name: 'Nhlaz Health and Beauty', // Dynamic variable for the recipient's name
-        from_name: 'Email Subscriber',  // Dynamic variable for the sender's name
-        message_html: emailField // Dynamic variable for the email body
-    };
-    var emailField = document.getElementById("email").value;
-    // Send the email
-    emailjs.send('service_ucduwqu', 'template_o9gjywv', templateParams)
-    .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Email sent successfully!');
-    }, function(error) {
-        console.log('FAILED...', error);
-        alert('Email sending failed. Please check the console for details.');
-    });
+    //serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_s0dx2e8', 'template_athtn9s','#contact-form', '0tUMGK-9-kPheyyXA').then(()=>{
+        // Show sent message
+        contactMessage.textContent = 'Message sent successfully!!!'
+        // Remove message after 5s
+        setTimeout(() =>{
+            contactMessage.textContent = ''
+        }, 5000)
+        // Clear the input fields
+        contactForm.reset()
+    }, () =>{
+        // Show error message
+        contactMessage.textContent = 'Message not sent (service error)'
+    })
 }
-sendEmail();
+
+contactForm.addEventListener("submit", sendMail)
