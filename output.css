@@ -970,19 +970,19 @@ video {
   border-color: rgb(203 213 225 / var(--tw-border-opacity, 1));
 }
 
-.bg-\[\#040503\]{
+.bg-\[\#0e191d\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(4 5 3 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#5f7745\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(95 119 69 / var(--tw-bg-opacity, 1));
+  background-color: rgb(14 25 29 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#dad7cd\]{
   --tw-bg-opacity: 1;
   background-color: rgb(218 215 205 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#fbf3f2\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 243 242 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green-700{
@@ -1103,6 +1103,10 @@ video {
   text-align: center;
 }
 
+.font-Edu{
+  font-family: Edu QLD Hand, cursive;
+}
+
 .font-Lobster{
   font-family: Lobster, sans-seri;
 }
@@ -1159,14 +1163,8 @@ video {
   font-style: italic;
 }
 
-.text-\[\#07301a\]{
-  --tw-text-opacity: 1;
-  color: rgb(7 48 26 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#1c382c\]{
-  --tw-text-opacity: 1;
-  color: rgb(28 56 44 / var(--tw-text-opacity, 1));
+.leading-tight{
+  line-height: 1.25;
 }
 
 .text-\[\#1e704b\]{
@@ -1182,6 +1180,11 @@ video {
 .text-\[\#6e5a42\]{
   --tw-text-opacity: 1;
   color: rgb(110 90 66 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#829461\]{
+  --tw-text-opacity: 1;
+  color: rgb(130 148 97 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#b2a38c\]{
@@ -1227,6 +1230,16 @@ video {
 .text-yellow-500{
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#d0c7c2\]{
+  --tw-text-opacity: 1;
+  color: rgb(208 199 194 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#d0c7c4\]{
+  --tw-text-opacity: 1;
+  color: rgb(208 199 196 / var(--tw-text-opacity, 1));
 }
 
 .opacity-20{
@@ -1376,7 +1389,7 @@ h3{
 
 .nav-link:hover{
   --tw-text-opacity: 1;
-  color: rgb(234 179 8 / var(--tw-text-opacity, 1));
+  color: rgb(130 148 97 / var(--tw-text-opacity, 1));
 }
 
 /* Active link */
@@ -1434,13 +1447,6 @@ h3{
   width: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
-}
-
-form input{
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .hover\:translate-y-1:hover{
