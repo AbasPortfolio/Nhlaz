@@ -74,15 +74,15 @@ const swiper = new Swiper('.swiper',{
 
 
 /* ===================== EMAIL JS ======================== */
+
 const contactForm = document.getElementById('contact-form')
 const contactMessage = document.getElementById('contact-message')
 const sendMail = (e)=>{
       e.preventDefault()
-
     //serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_s0dx2e8', 'template_athtn9s','#contact-form', '0tUMGK-9-kPheyyXA').then(()=>{
         // Show sent message
-        contactMessage.textContent = 'Message sent successfully!!!'
+        contactMessage.textContent = 'Message sent. Thank you ..'
         // Remove message after 5s
         setTimeout(() =>{
             contactMessage.textContent = ''
@@ -93,6 +93,7 @@ const sendMail = (e)=>{
         // Show error message
         contactMessage.textContent = 'Message not sent (service error)'
     })
+
 }
 
 contactForm.addEventListener("submit", sendMail)
