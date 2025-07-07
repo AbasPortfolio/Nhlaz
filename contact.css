@@ -44,7 +44,7 @@ h1{
   display: block;
 }
 
-#todayDate input{
+#todayDate date{
   /*background-color: transparent;*/
   /*color: !important #1e704b;*/
   cursor: pointer;
@@ -58,6 +58,9 @@ h1{
   border-radius: 2px;
   color: #1e704b;
   position: relative;
+}
+#todayDate date:focus{
+  color: #1e704b;
 }
 #todayDate i[type="date"]::-webkit-calendar-picker-indicator{
   font-size: 22px;
