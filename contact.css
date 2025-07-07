@@ -45,9 +45,18 @@ h1{
 }
 
 #todayDate input{
-  background-color: #dad7cd;
-  color: !important #1e704b;
+  /*background-color: transparent;*/
+  /*color: !important #1e704b;*/
   cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  width: 100%;
+  font-size: bold;
+  box-sizing: border-box;
+  background: #83937f;
+  border-radius: 2px;
+  color: #6e5a42;
+  position: relative;
 }
 #todayDate i[type="date"]::-webkit-calendar-picker-indicator{
   font-size: 22px;
