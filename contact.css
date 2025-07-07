@@ -51,11 +51,12 @@ h1{
   font: inherit;
   line-height: normal;
   width: 100%;
-  font-size: bold;
+  font-size: 16px;
+  font-weight: bold;
   box-sizing: border-box;
   background: #83937f;
   border-radius: 2px;
-  color: #6e5a42;
+  color: #1e704b;
   position: relative;
 }
 #todayDate i[type="date"]::-webkit-calendar-picker-indicator{
