@@ -45,7 +45,7 @@ h1{
 }
 
 #todayDate input{
-  background-color: transparent;
+  background: transparent;
   color: #1e704b;
  cursor: pointer;
 }
