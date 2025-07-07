@@ -43,11 +43,12 @@ h1{
   background: none;
   display: block;
 }
-
+#todayDate{
+  background-color: transparent;
+}
 #todayDate input{
-  background: transparent;
   color: #1e704b;
- cursor: pointer;
+  cursor: pointer;
 }
 #todayDate i[type="date"]::-webkit-calendar-picker-indicator{
   font-size: 22px;
