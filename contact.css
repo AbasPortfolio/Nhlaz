@@ -43,11 +43,10 @@ h1{
   background: none;
   display: block;
 }
-#todayDate{
-  background-color: transparent;
-}
+
 #todayDate input{
-  color: #1e704b;
+  background-color: #dad7cd;
+  color: !important #1e704b;
   cursor: pointer;
 }
 #todayDate i[type="date"]::-webkit-calendar-picker-indicator{
