@@ -45,18 +45,17 @@ h1{
 }
 
 #todayDate date{
-  /*background-color: transparent;*/
-  /*color: !important #1e704b;*/
+  background-color: transparent;
+  color: !important #1e704b;
   cursor: pointer;
   font: inherit;
   line-height: normal;
   width: 100%;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: bold;
   box-sizing: border-box;
-  background: #83937f;
   border-radius: 2px;
-  color: #6e5a42;
+  /*color: #6e5a42;*/
   position: relative;
 }
 #todayDate date:focus{
