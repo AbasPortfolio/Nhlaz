@@ -810,18 +810,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-50{
-  --tw-scale-x: .5;
-  --tw-scale-y: .5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-100{
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1026,16 +1014,12 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
 
-.p-1{
-  padding: 0.25rem;
-}
-
 .p-10{
   padding: 2.5rem;
 }
 
-.p-4{
-  padding: 1rem;
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-5{
@@ -1044,14 +1028,6 @@ video {
 
 .p-6{
   padding: 1.5rem;
-}
-
-.p-8{
-  padding: 2rem;
-}
-
-.p-2{
-  padding: 0.5rem;
 }
 
 .px-1{
@@ -1161,6 +1137,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1222,9 +1203,9 @@ video {
   color: rgb(208 199 194 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#d0c7c4\]{
+.text-\[\#dad7cd\]{
   --tw-text-opacity: 1;
-  color: rgb(208 199 196 / var(--tw-text-opacity, 1));
+  color: rgb(218 215 205 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-400{
@@ -1409,6 +1390,13 @@ h3{
   transition-duration: 300ms;
 }
 
+@media (min-width: 340px){
+  .nav-link{
+    --tw-text-opacity: 1;
+    color: rgb(218 215 205 / var(--tw-text-opacity, 1));
+  }
+}
+
 .nav-link:hover{
   --tw-text-opacity: 1;
   color: rgb(130 148 97 / var(--tw-text-opacity, 1));
@@ -1520,6 +1508,11 @@ h3{
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
