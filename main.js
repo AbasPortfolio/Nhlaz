@@ -11,7 +11,7 @@ const hamburger = document.getElementById("hamburger");
 navLink.forEach(link => {
     link.addEventListener("click",()=>{
         navMenu.classList.toggle("left-[0]")
-    hamburger.classList.toggle("ri-close-large-line text-[#d0c7c4]")
+    hamburger.classList.toggle("ri-close-large-line text-[#dad7cd]")
     })
 });
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
